@@ -5,9 +5,10 @@
 #container{
     background-color: rgb(240, 240, 240);
     display: grid;
-    gap: 10px;
-    grid-template-columns: 160px 1fr;
+    gap: 30px;
+    grid-template-columns: 1fr;
     padding: 20px;
+    margin: 20px 140px;
     border-radius: 10px;
     box-shadow: 5px 5px 10px rgba(0,0,0,0.1),
                 -5px -5px 10px rgba(0,0,0,0.1);
@@ -25,15 +26,16 @@
 }
 
 .newBook button{
-    background-color: rgb(2, 177, 153);
+    background-color: black;
     box-shadow: 6px 6px 6px rgba(2, 177, 153, 0.3);
-    height: 30px;
-    padding: 0px 15px;
+    height: 50px;
+    padding: 0px 40px;
     border: none;
-    border-radius: 15px;
+    border-radius: 25px;
     cursor: pointer;
     font-weight: bold;
-    font-size: 14px;
+    font-size: 20px;
+    color: rgb(2, 177, 153);
 }
 
 #booksList{
