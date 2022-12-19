@@ -1,18 +1,4 @@
-let myLibrary = [
-    {
-        title: "Ipoteza fericirii",
-        author: "Jonathan Haidt",
-        pages: 379,
-        read: "read"
-    },
-    {
-        title: "Sunt o baba comunista",
-        author: "Dan NuStiuCum",
-        pages: 253,
-        read: "read"
-    }
-];
-
+let myLibrary = [];
 let container = document.getElementById('booksList');
 
 function displayBooks(){
@@ -39,7 +25,7 @@ Book.prototype.addBookToLibrary = function(){
     myLibrary.push(book);
 }
 
-let newBook = new Book ('boos', 'me', 443, 'read');
+let newBook = new Book ('boos', 'me', 443, 'not read');
 newBook.addBookToLibrary();
 
 displayBooks();
