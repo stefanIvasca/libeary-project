@@ -36,6 +36,14 @@ Book.prototype.addBookToLibrary = function(){
     myLibrary.push(book);
 }
 
+function displayForm(){
+    let formContainer = document.createElement('div');
+    formContainer.innerText = 'this is what was created';
+    formContainer.classList.add('formContainer')
+    document.body.appendChild(formContainer);
+    console.log('again and again')
+}
+
 let newBook = new Book ('boos', 'me', 443, 'not read');
 newBook.addBookToLibrary();
 

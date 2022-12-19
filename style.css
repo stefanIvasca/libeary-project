@@ -66,3 +66,12 @@
 #booksList div p{
     margin:5px 0px 10px 0px;
 }
+
+.formContainer{
+    background-color: blue;
+    height: 300px;
+    width: 300px;
+    top: 40%;
+    left: 40%;
+    position: absolute;
+}
