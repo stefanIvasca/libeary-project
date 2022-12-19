@@ -25,3 +25,12 @@
     display: grid;
     gap: 10px;
 }
+
+#booksList div{
+    background-color: white;
+    display: grid;
+    align-items: center;
+    padding: 5px 20px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 6px rgba(0,0,0,0.1);
+}

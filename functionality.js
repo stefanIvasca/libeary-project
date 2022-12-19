@@ -17,7 +17,7 @@ let container = document.getElementById('booksList');
 
 myLibrary.forEach(function(book){
     let bookContainer = document.createElement('div');
-    bookContainer.innerText = `${book.author} by ${book.author}, has ${book.pages} pages and is ${book.read}`;
+    bookContainer.innerText = `${book.title} by ${book.author}, has ${book.pages} pages and is ${book.read}`;
     container.appendChild(bookContainer);
 })
 
