@@ -13,6 +13,12 @@ let myLibrary = [
     }
 ];
 
+myLibrary.forEach(function(book){
+    console.log (book);
+})
+
+
+
 function Book() {
     //constructor
 }
