@@ -15,16 +15,23 @@ let myLibrary = [
 
 let container = document.getElementById('booksList');
 
-myLibrary.forEach(function(book){
-    let bookContainer = document.createElement('div');
-    bookContainer.innerText = `${book.title} by ${book.author}, has ${book.pages} pages and is ${book.read}`;
-    container.appendChild(bookContainer);
-})
+function displayBooks(){
+    myLibrary.forEach(function(book){
+        let bookContainer = document.createElement('div');
+        bookContainer.innerText = `${book.title} by ${book.author}, has ${book.pages} pages and is ${book.read}`;
+        container.appendChild(bookContainer);
+    })
+}
+
+displayBooks();
 
 
 
-function Book() {
-    //constructor
+function Book(title, author, pages, read) {
+    this.title = title;
+    this.author = author;
+    this.pages = pages;
+    this.read = read;
 }
 
 function addBookToLibrary(){
