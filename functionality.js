@@ -40,9 +40,6 @@ Book.prototype.addBookToLibrary = function(){
 }
 
 let newBook = new Book ('boos', 'me', 443, 'read');
-let secondBook = new Book ('boos', 'me', 443, 'read');
 newBook.addBookToLibrary();
-secondBook.addBookToLibrary();
-console.log(myLibrary);
 
 displayBooks();
