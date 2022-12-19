@@ -1,4 +1,4 @@
-.container{
+#container{
     background-color: rgb(240, 240, 240);
     display: grid;
     gap: 10px;
@@ -9,10 +9,19 @@
                 -5px -5px 10px rgba(0,0,0,0.1);
 }
 
+.newBook{
+    grid-row: 1/-1;
+}
+
 .newBook button{
     background-color: rgb(2, 177, 153);
     height: 30px;
     padding: 0px 15px;
     border: none;
     border-radius: 15px;
+}
+
+#booksList{
+    display: grid;
+    gap: 10px;
 }

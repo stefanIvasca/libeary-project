@@ -1,20 +1,24 @@
 let myLibrary = [
     {
-        Title: "Ipoteza fericirii",
-        Author: "Jonathan Haidt",
-        Pages: 379,
+        title: "Ipoteza fericirii",
+        author: "Jonathan Haidt",
+        pages: 379,
         read: "read"
     },
     {
-        Title: "Sunt o baba comunista",
-        Author: "Dan NuStiuCum",
-        Pages: 253,
+        title: "Sunt o baba comunista",
+        author: "Dan NuStiuCum",
+        pages: 253,
         read: "read"
     }
 ];
 
+let container = document.getElementById('booksList');
+
 myLibrary.forEach(function(book){
-    console.log (book);
+    let bookContainer = document.createElement('div');
+    bookContainer.innerText = `${book.author} by ${book.author}, has ${book.pages} pages and is ${book.read}`;
+    container.appendChild(bookContainer);
 })
 
 
