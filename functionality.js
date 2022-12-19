@@ -23,10 +23,6 @@ function displayBooks(){
     })
 }
 
-displayBooks();
-
-
-
 function Book(title, author, pages, read) {
     this.title = title;
     this.author = author;
@@ -34,6 +30,19 @@ function Book(title, author, pages, read) {
     this.read = read;
 }
 
-function addBookToLibrary(){
-    //do stuff here
+Book.prototype.addBookToLibrary = function(){
+    let book = {};
+    book.title = this.title;
+    book.author = this.author;
+    book.pages = this.pages;
+    book.read = this.read;
+    myLibrary.push(book);
 }
+
+let newBook = new Book ('boos', 'me', 443, 'read');
+let secondBook = new Book ('boos', 'me', 443, 'read');
+newBook.addBookToLibrary();
+secondBook.addBookToLibrary();
+console.log(myLibrary);
+
+displayBooks();
