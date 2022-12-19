@@ -1,8 +1,12 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
 #container{
     background-color: rgb(240, 240, 240);
     display: grid;
     gap: 10px;
-    grid-template-columns: 1fr 3fr;
+    grid-template-columns: 160px 1fr;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 5px 5px 10px rgba(0,0,0,0.1),
@@ -11,27 +15,52 @@
 
 .newBook{
     grid-row: 1/-1;
+    display: flex;
+    justify-content: center;
+}
+
+.newBook :hover{
+    scale: 1.08;
+    transition: 0.05s;
 }
 
 .newBook button{
     background-color: rgb(2, 177, 153);
+    box-shadow: 6px 6px 6px rgba(2, 177, 153, 0.3);
     height: 30px;
     padding: 0px 15px;
     border: none;
     border-radius: 15px;
     cursor: pointer;
+    font-weight: bold;
+    font-size: 14px;
 }
 
 #booksList{
     display: grid;
-    gap: 10px;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
 }
 
 #booksList div{
-    background-color: white;
+    background-color:  rgb(2, 177, 153);
     display: grid;
-    align-items: center;
-    padding: 5px 20px;
+    grid-template-rows: 1fr 1fr 25px 25px;
+    padding: 15px;
     border-radius: 10px;
-    box-shadow: 3px 3px 6px rgba(0,0,0,0.1);
+    box-shadow: 6px 6px 6px rgba(2, 177, 153, 0.3);
+}
+
+#booksList div h1{
+    text-align: center;
+}
+
+#booksList div h2{
+    text-align: right;
+    font-size: 21px;
+    margin: 0px 0px 60px 0px;
+}
+
+#booksList div p{
+    margin:5px 0px 10px 0px;
 }
