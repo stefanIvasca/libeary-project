@@ -52,6 +52,16 @@ function displayForm(){
     formContainer.style.visibility = 'visible';
 }
 
+let submitButton = document.querySelector('.submitButton');
+submitButton.addEventListener('click', getFormInfo);
+
+function getFormInfo(){
+    let title = document.querySelector('#title');
+    console.log(title.value);
+    event.preventDefault();
+    closeForm();
+}
+
 let newBook = new Book ('boos', 'me', 443, 'not read');
 newBook.addBookToLibrary();
 
