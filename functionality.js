@@ -37,11 +37,11 @@ Book.prototype.addBookToLibrary = function(){
 }
 
 function displayForm(){
-    let formContainer = document.createElement('div');
-    formContainer.innerText = 'this is what was created';
-    formContainer.classList.add('formContainer')
-    document.body.appendChild(formContainer);
-    console.log('again and again')
+    let formContainer = document.querySelector('.formContainer');
+    let newBookButton = document.querySelector('.newBook');
+    newBookButton.style.filter = 'blur(4px)';
+    container.style.filter = 'blur(4px)';
+    formContainer.style.visibility = 'visible';
 }
 
 let newBook = new Book ('boos', 'me', 443, 'not read');

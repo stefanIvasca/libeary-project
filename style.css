@@ -68,10 +68,22 @@
 }
 
 .formContainer{
-    background-color: blue;
-    height: 300px;
-    width: 300px;
-    top: 40%;
-    left: 40%;
+    background-color: rgba(10, 39, 33, 0.897);
+    height: 400px;
+    width: 400px;
+    left: 0; 
+    right: 0; 
+    top: 200px;
+    margin-left: auto; 
+    margin-right: auto; 
     position: absolute;
+    padding: 30px;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    box-shadow: 36px 36px 36px rgba(0, 0, 0, 0.25),
+                -36px -36px 36px rgba(0, 0, 0, 0.25);
+    visibility: hidden;
+    color: white;
 }
