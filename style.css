@@ -86,4 +86,16 @@
                 -36px -36px 36px rgba(0, 0, 0, 0.25);
     visibility: hidden;
     color: white;
+    font-size: 21px;
+    font-weight: bold;
+}
+
+.formContainer button{
+    height: 50px;
+    font-size: 21px;
+    font-weight: bold;
+    background-color: rgb(2, 177, 153);
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
 }

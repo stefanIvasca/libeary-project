@@ -20,6 +20,14 @@ function displayBooks(){
     })
 }
 
+function closeForm(){
+    let formContainer = document.querySelector('.formContainer');
+    let newBookButton = document.querySelector('.newBook');
+    newBookButton.style.filter = 'blur(0px)';
+    container.style.filter = 'blur(0px)';
+    formContainer.style.visibility = 'hidden';
+}
+
 function Book(title, author, pages, read) {
     this.title = title;
     this.author = author;
