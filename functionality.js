@@ -56,14 +56,17 @@ let submitButton = document.querySelector('.submitButton');
 submitButton.addEventListener('click', getFormInfo);
 
 function getFormInfo(){
-    let title = document.querySelector('#title');
-    console.log(title.value);
+    let title = document.querySelector('#title').value;
+    let author = document.querySelector('#author').value;
+    let pages = document.querySelector('#pages').value;
+    let read = document.querySelector('input[name="read"]:checked').value;
+    let newBook = new Book (title, author, pages, read);
+    newBook.addBookToLibrary();
+    container.innerHTML='';
+    displayBooks();
     event.preventDefault();
     closeForm();
 }
-
-let newBook = new Book ('boos', 'me', 443, 'not read');
-newBook.addBookToLibrary();
 
 let secBook = new Book ('bodsfsos', 'meaa', 44, 'read');
 secBook.addBookToLibrary();
