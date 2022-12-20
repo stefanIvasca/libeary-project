@@ -16,26 +16,20 @@
         <div id="booksList"></div>
     </div>
     <div class="formContainer">
-        <form action="example.com/path" method="post">
-            <label for="title">Book title</label>
-            <input type="text" id="title">
-        </form>
-        <form action="example.com/path" method="post">
-            <label for="author">Author</label>
-            <input type="text" id="author">
-        </form>
-        <form action="example.com/path" method="post">
-            <label for="pages">Pages</label>
-            <input type="number" id="author" min="1">
-        </form>
-        <form action="example.com/path" method="post">
+        <form method="post">
+            <label for="title">Book title:</label>
+            <input type="text" id="title" name="title" placeholder="The Great Book">
+            <label for="author">Author:</label>
+            <input type="text" id="author" name="author" placeholder="Author Name">
+            <label for="pages">Pages:</label>
+            <input type="number" id="pages" name="pages" min="1">
             <input type="radio" id="read" name="read" value="read">
             <label for="read">Read</label>
             <input type="radio" id="notRead" name="read" value="notRead">
             <label for="notRead">Not Read</label>
-        </form>
-        <button type="submit">Submit</button>
-        <button type="cancel" onclick="closeForm()">Cancel</button>
+            <button type="submit">Submit</button>
+            <button type="button" onclick="closeForm()">Cancel</button>
+        </form> 
     </div>
 </body>
 </html>

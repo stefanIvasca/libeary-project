@@ -67,6 +67,7 @@
     margin:5px 0px 10px 0px;
 }
 
+
 .formContainer{
     background-color: rgba(10, 39, 33, 0.897);
     height: 400px;
@@ -90,7 +91,14 @@
     font-weight: bold;
 }
 
+.formContainer form{
+    display: grid;
+    gap: 15px;
+    grid-template-columns: 105px 180px;
+}
+
 .formContainer button{
+    grid-column: 1/3;
     height: 50px;
     font-size: 21px;
     font-weight: bold;
