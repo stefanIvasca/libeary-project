@@ -20,6 +20,8 @@ function displayBooks(){
     })
 }
 
+//displayForm();
+
 function closeForm(){
     let formContainer = document.querySelector('.formContainer');
     let newBookButton = document.querySelector('.newBook');
