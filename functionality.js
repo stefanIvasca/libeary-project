@@ -8,6 +8,9 @@ function displayBooks(){
         let bookAuthor = document.createElement('h2');
         let bookPages = document.createElement('p');
         let bookRead = document.createElement('p');
+        let deleteButton = document.createElement('button');
+        deleteButton.innerText = 'Delete';
+        deleteButton.classList.add('deleteButton');
         bookTitle.innerText = `${book.title}`;
         bookAuthor.innerText = `by ${book.author}`;
         bookPages.innerText = `${book.pages} pages`;
@@ -16,11 +19,10 @@ function displayBooks(){
         bookContainer.appendChild(bookAuthor);
         bookContainer.appendChild(bookPages);
         bookContainer.appendChild(bookRead);
+        bookContainer.appendChild(deleteButton);
         container.appendChild(bookContainer);
     })
 }
-
-//displayForm();
 
 function closeForm(){
     let formContainer = document.querySelector('.formContainer');
