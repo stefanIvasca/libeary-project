@@ -3,12 +3,15 @@ let container = document.getElementById('booksList');
 
 function displayBooks(){
     myLibrary.forEach(function(book){
+        let containerAndDeleteId = Math.floor(Date.now()*Math.random());
         let bookContainer = document.createElement('div');
         let bookTitle = document.createElement('h1');
         let bookAuthor = document.createElement('h2');
         let bookPages = document.createElement('p');
         let bookRead = document.createElement('p');
         let deleteButton = document.createElement('button');
+        bookContainer.id = containerAndDeleteId;
+        deleteButton.id = containerAndDeleteId;
         deleteButton.innerText = 'Delete';
         deleteButton.classList.add('deleteButton');
         bookTitle.innerText = `${book.title}`;
