@@ -12,6 +12,12 @@ function displayBooks(){
         let deleteButton = document.createElement('button');
         bookContainer.id = containerAndDeleteId;
         deleteButton.id = containerAndDeleteId;
+
+        deleteButton.addEventListener("click", deleteBook);
+        function deleteBook(){
+            bookContainer.remove();
+        }
+
         deleteButton.innerText = 'Delete';
         deleteButton.classList.add('deleteButton');
         bookTitle.innerText = `${book.title}`;
