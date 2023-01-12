@@ -3,19 +3,22 @@ let container = document.getElementById('booksList');
 
 function displayBooks(){
     myLibrary.forEach(function(book){
-        let containerAndDeleteId = Math.floor(Date.now()*Math.random());
         let bookContainer = document.createElement('div');
         let bookTitle = document.createElement('h1');
         let bookAuthor = document.createElement('h2');
         let bookPages = document.createElement('p');
         let bookRead = document.createElement('p');
         let deleteButton = document.createElement('button');
-        bookContainer.id = containerAndDeleteId;
-        deleteButton.id = containerAndDeleteId;
-
+        deleteButton.id = `${book.id}`;
         deleteButton.addEventListener("click", deleteBook);
         function deleteBook(){
+            let indexOfObject = myLibrary.findIndex(object => {
+                return object.id === book.id;
+            })
+            myLibrary.splice(indexOfObject, 1);
             bookContainer.remove();
+            container.innerHTML='';
+            displayBooks();
         }
 
         deleteButton.innerText = 'Delete';
@@ -41,11 +44,12 @@ function closeForm(){
     formContainer.style.visibility = 'hidden';
 }
 
-function Book(title, author, pages, read) {
+function Book(title, author, pages, read, id) {
     this.title = title;
     this.author = author;
     this.pages = pages;
     this.read = read;
+    this.id = id;
 }
 
 Book.prototype.addBookToLibrary = function(){
@@ -54,6 +58,7 @@ Book.prototype.addBookToLibrary = function(){
     book.author = this.author;
     book.pages = this.pages;
     book.read = this.read;
+    book.id = this.id;
     myLibrary.push(book);
 }
 
@@ -73,21 +78,13 @@ function getFormInfo(){
     let author = document.querySelector('#author').value;
     let pages = document.querySelector('#pages').value;
     let read = document.querySelector('input[name="read"]:checked').value;
-    let newBook = new Book (title, author, pages, read);
+    let id = Math.floor(Date.now()*Math.random());
+    let newBook = new Book (title, author, pages, read, id);
     newBook.addBookToLibrary();
     container.innerHTML='';
     displayBooks();
     event.preventDefault();
     closeForm();
 }
-
-let secBook = new Book ('bodsfsos', 'meaa', 44, 'read');
-secBook.addBookToLibrary();
-
-let thrdBook = new Book ('What a book', 'Elon Gates', 52, 'not read');
-thrdBook.addBookToLibrary();
-
-let frthBook = new Book ('Not random', 'My Precious', 666, 'read');
-frthBook.addBookToLibrary();
 
 displayBooks();
