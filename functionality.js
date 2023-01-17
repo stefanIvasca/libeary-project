@@ -9,6 +9,9 @@ function displayBooks(){
         let bookPages = document.createElement('p');
         let bookRead = document.createElement('p');
         let deleteButton = document.createElement('button');
+        let changeStatusButton = document.createElement('button');
+        changeStatusButton.classList.add('deleteButton');
+        changeStatusButton.id = `${book.id}`;
         deleteButton.id = `${book.id}`;
         deleteButton.addEventListener("click", deleteBook);
         function deleteBook(){
@@ -21,6 +24,24 @@ function displayBooks(){
             displayBooks();
         }
 
+        if (book.read == 'Read'){
+            changeStatusButton.innerText = 'to Not Read';
+        }
+        else{
+            changeStatusButton.innerText = 'to Read';
+        }
+
+        changeStatusButton.addEventListener("click", changeStatus);
+        function changeStatus(){
+            if (book.read == 'Read'){
+                book.read = 'Not Read';
+            }
+            else{
+                book.read = 'Read';
+            } 
+            container.innerHTML='';
+            displayBooks();
+        }
         deleteButton.innerText = 'Delete';
         deleteButton.classList.add('deleteButton');
         bookTitle.innerText = `${book.title}`;
@@ -31,6 +52,7 @@ function displayBooks(){
         bookContainer.appendChild(bookAuthor);
         bookContainer.appendChild(bookPages);
         bookContainer.appendChild(bookRead);
+        bookContainer.appendChild(changeStatusButton);
         bookContainer.appendChild(deleteButton);
         container.appendChild(bookContainer);
     })
